@@ -6,11 +6,89 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	overflow-x: hidden;
+	background-color: #333;
 	margin: 0;
-	height: 100vh;
-	overflow: hidden;
+	color: rgb(24, 24, 24);
+}
+.container {
+	width: 100vw;
+	min-height: 100vh;
+	background-color: white;
+	transform-origin: top left;
+	transition: transform 0.5s linear;
+	padding: 55px;
+}
+img {
+	max-width: 100%;
+}
+.round-container {
+	position: fixed;
+	top: -100px;
+	left: -100px;
+}
+.circle {
+	height: 200px;
+	width: 200px;
+	background-color: tomato;
+	border-radius: 50%;
+	position: relative;
+	transform: rotate();
+}
+button {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border: 0;
+	background-color: transparent;
+	height: 100px;
+	color: white;
+	font-size: 26px;
+}
+button:focus {
+	border: none;
+}
+button#open {
+	left: 60%;
+}
+button#close {
+	top: 60%;
+	transform: rotate(90deg);
+	transform-origin: top left;
+}
+.container.show-nav {
+	transform: rotate(-20deg);
+}
+.content {
+	max-width: 1000px;
+	margin: 50px auto;
+}
+.content h1 {
+	margin: 0;
+}
+.content h5 {
+	margin: 0;
+	font-style: italic;
+	color: #444;
+}
+.content p {
+	color: #333;
+	line-height: 1.5;
+}
+nav {
+	position: fixed;
+	bottom: 0;
+	z-index: -1;
+}
+nav ul {
+	list-style-type: none;
+}
+nav ul li {
+	margin: 10px;
+	padding: 5px 0;
+	color: white;
+}
+nav ul li i {
+	padding-right: 10px;
 }
